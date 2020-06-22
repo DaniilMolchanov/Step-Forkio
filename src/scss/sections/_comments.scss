@@ -1,0 +1,98 @@
+.comments {
+  background-image: url("../images/comments-section/comments-background.png");
+  background-size: cover;
+  box-sizing: border-box;
+  height: 770px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media(min-width:481px) and (max-width: 992px){
+    height: max-content;
+  }
+  @media(min-width:320px) and (max-width: 480px){
+    height: max-content;
+    padding-bottom: 125px;
+  }
+
+
+  &-title {
+    font-family: $font-montserrat;;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 48px;
+    color: $color-white;
+    margin: 0 auto;
+    padding: 108px 0 75px;
+    text-align: center;
+    @media(min-width:481px) and (max-width: 992px){
+      padding: 87px 27px;
+      font-size: 42px;
+    }
+    @media(min-width:320px) and (max-width: 480px) {
+      padding: 56px 10px 53px;
+      font-size: 36px;
+    }
+  }
+
+  &-main {
+    justify-content: center;
+    padding: 0 80px;
+    display: grid;
+    grid-column-gap: 100px;
+    grid-row-gap: 80px;
+    grid-template-rows: repeat(2, 145px);
+    grid-template-columns:repeat(3, 1fr);
+    margin:0 auto 110px;
+    @media(min-width:481px) and (max-width: 992px){
+      grid-template-rows: repeat(3, 145px);
+      grid-template-columns:repeat(auto-fill, 315px);
+      grid-column-gap: 60px;
+      margin:0 auto;
+      padding: 0 10px;
+    }
+    @media(min-width:320px) and (max-width: 480px){
+      grid-template-rows: repeat(3, 145px);
+      grid-template-columns:repeat(auto-fill, 300px);
+      grid-column-gap: 40px;
+      margin:0 auto;
+      padding: 0 10px 20px;
+    }
+
+    &-company {
+      @include flex-align-center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &-logo {
+        padding-bottom: 20px;
+      }
+
+      &-description {
+        font-family: $font-lato;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 16px;
+        color: $color-white;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  &-footer {
+    margin: 0 auto;
+    max-width: 887px;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 0 145px;
+    text-align: center;
+    color: #A291A5;
+    @media(min-width:481px) and (max-width: 992px){
+      padding: 35px;
+    }
+    @media(min-width:320px) and (max-width: 480px){
+      display: none;
+    }
+  }
+}
